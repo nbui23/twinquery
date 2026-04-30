@@ -1,6 +1,6 @@
 # TwinQuery
 
-Local AI copilot for building-stock analytics and retrofit triage. Asks plain-English questions against a PostGIS building database and optional local retrofit guidance docs, then returns SQL results, map polygons, and grounded answers with no cloud APIs required.
+Local AI copilot for building-stock analytics and retrofit triage. Ask plain-English questions against a PostGIS building database and optional local retrofit guidance docs, then returns SQL results, map polygons, and grounded answers with no cloud APIs required.
 
 ## Stack
 
