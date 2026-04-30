@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: twinquery-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: twinquery
+      POSTGRES_USER: twinquery
+      POSTGRES_PASSWORD: twinquery
+    ports:
+      - "5433:5432"
+    volumes:
+      - twinquery_pgdata:/var/lib/postgresql/data
+      - ./twinquery/db/schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U twinquery -d twinquery"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  twinquery_pgdata:

@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+streamlit
+pydeck
+requests
+pytest
+httpx
+psycopg[binary]
+langgraph
+sentence-transformers
